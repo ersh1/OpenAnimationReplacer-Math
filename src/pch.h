@@ -7,3 +7,5 @@ namespace WinAPI = SKSE::WinAPI;
 namespace logs = SKSE::log;
 namespace stl = SKSE::stl;
 using namespace std::literals;
+
+#pragma warning(disable : 4702)

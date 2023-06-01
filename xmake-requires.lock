@@ -9,15 +9,23 @@
                 commit = "2a40e4b0e57fa3231195238ed984000a8100aa70",
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
-            version = "3.24.2"
+            version = "3.25.2"
         },
-        ["commonlibsse-ng#6cab6700"] = {
+        ["commonlibsse-ng#dc79ba23"] = {
             repo = {
                 branch = "master",
-                commit = "2a40e4b0e57fa3231195238ed984000a8100aa70",
-                url = "https://github.com/xmake-io/xmake-repo.git"
+                commit = "a723eaef7144dcd2eec359a171629c82a631882d",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "v3.7.0"
+        },
+        ["exprtk#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "a723eaef7144dcd2eec359a171629c82a631882d",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2022.01.01"
         },
         ["fmt#31fecfc4"] = {
             repo = {
@@ -35,6 +43,14 @@
             },
             version = "8.50"
         },
+        ["rapidjson#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "a723eaef7144dcd2eec359a171629c82a631882d",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2022.7.20"
+        },
         ["spdlog#b06e1130"] = {
             repo = {
                 branch = "master",
@@ -42,6 +58,9 @@
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
             version = "v1.11.0"
+        },
+        ["vcpkg::imgui#31fecfc4"] = {
+            version = "latest"
         }
     }
 }
