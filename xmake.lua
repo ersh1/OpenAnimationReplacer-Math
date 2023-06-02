@@ -25,15 +25,12 @@ add_rules("plugin.vsxmake.autoupdate")
 set_policy("package.requires_lock", true)
 
 -- require packages
-add_requires("commonlibsse-ng", { configs = { skyrim_vr = true } })
-add_requires("vcpkg::imgui")
-add_requires("rapidjson")
-add_requires("exprtk")
+add_requires("commonlibsse-ng", "imgui", "rapidjson", "exprtk")
 
 -- targets
 target("OpenAnimationReplacer-Math")
     -- add packages to target
-    add_packages("fmt", "spdlog", "commonlibsse-ng", "vcpkg::imgui", "rapidjson", "exprtk")
+    add_packages("fmt", "spdlog", "commonlibsse-ng", "imgui", "rapidjson", "exprtk")
 
     -- add commonlibsse-ng plugin
     add_rules("@commonlibsse-ng/plugin", {
