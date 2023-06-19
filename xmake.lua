@@ -3,7 +3,7 @@ set_xmakever("2.7.8")
 
 -- set project
 set_project("OpenAnimationReplacer-Math")
-set_version("1.0.0")
+set_version("1.0.1")
 set_license("gplv3")
 set_languages("c++20")
 set_optimize("faster")

@@ -11,7 +11,7 @@ namespace Conditions
 
 		struct MathVariable
 		{
-			MathVariable(const char* a_name);
+			MathVariable(const ICondition* a_parentCondition, const char* a_name);
 
 			void SetValue(RE::TESObjectREFR* a_refr) const
 			{
@@ -22,8 +22,8 @@ namespace Conditions
 			mutable float value = 0.f;
 		};
 
-		MathConditionComponent(const char* a_name, const char* a_description = "") :
-			ICustomConditionComponent(a_name, a_description)
+		MathConditionComponent(const ICondition* a_parentCondition, const char* a_name, const char* a_description = "") :
+			ICustomConditionComponent(a_parentCondition, a_name, a_description)
 		{
 			_expression.register_symbol_table(_symbolTable);
 		}
@@ -50,7 +50,7 @@ namespace Conditions
 		exprtk::symbol_table<float> _symbolTable;
 	};
 
-	IConditionComponent* MathConditionComponentFactory(const char* a_name);
+	IConditionComponent* MathConditionComponentFactory(const ICondition* a_parentCondition, const char* a_name, const char* a_description);
 
 	class MathStatementCondition : public CustomCondition
 	{

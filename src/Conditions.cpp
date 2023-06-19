@@ -8,12 +8,12 @@
 
 namespace Conditions
 {
-	MathConditionComponent::MathVariable::MathVariable(const char* a_name)
+	MathConditionComponent::MathVariable::MathVariable(const ICondition* a_parentCondition, const char* a_name)
 	{
 		const auto numericConditionComponentFactory = g_oarConditionsInterface->GetConditionComponentFactory(
 			ConditionComponentType::kNumeric);
 		component = std::unique_ptr<INumericConditionComponent>(
-			static_cast<INumericConditionComponent*>(numericConditionComponentFactory(
+			static_cast<INumericConditionComponent*>(numericConditionComponentFactory(a_parentCondition,
 				a_name, "A variable from the math statement.")));
 	}
 
@@ -198,7 +198,7 @@ namespace Conditions
 				}
 				else
 				{
-					auto& newVar = _variables.emplace_back(std::make_unique<MathVariable>(varName.data()));
+					auto& newVar = _variables.emplace_back(std::make_unique<MathVariable>(GetParentCondition(), varName.data()));
 					_symbolTable.add_variable(varName, newVar->value);
 				}
 			}
@@ -216,9 +216,9 @@ namespace Conditions
 		parser.compile(a_expression, _expression);
 	}
 
-	IConditionComponent* MathConditionComponentFactory(const char* a_name, const char* a_description)
+	IConditionComponent* MathConditionComponentFactory(const ICondition* a_parentCondition, const char* a_name, const char* a_description)
 	{
-		return new MathConditionComponent(a_name, a_description);
+		return new MathConditionComponent(a_parentCondition, a_name, a_description);
 	}
 
 	MathStatementCondition::MathStatementCondition()
