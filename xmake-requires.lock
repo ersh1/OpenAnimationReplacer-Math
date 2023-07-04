@@ -38,10 +38,10 @@
         ["imgui#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "a723eaef7144dcd2eec359a171629c82a631882d",
-                url = "https://github.com/xmake-io/xmake-repo.git"
+                commit = "41b628d30fe1816c9942b3697da3ec924a6f395d",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
             },
-            version = "1.89.2"
+            version = "v1.89.6"
         },
         ["rapidcsv#31fecfc4"] = {
             repo = {
