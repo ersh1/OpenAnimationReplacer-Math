@@ -1,11 +1,16 @@
 #pragma once
 
+#define NOMINMAX
+
 #include <RE/Skyrim.h>
 #include <SKSE/SKSE.h>
 
-namespace WinAPI = SKSE::WinAPI;
-namespace logs = SKSE::log;
-namespace stl = SKSE::stl;
-using namespace std::literals;
-
 #pragma warning(disable : 4702)
+
+#include <exprtk.hpp>
+#include <imgui.h>
+#include <imgui_stdlib.h>
+#include <rapidjson/document.h>
+
+namespace logs = SKSE::log;
+using namespace std::literals;
