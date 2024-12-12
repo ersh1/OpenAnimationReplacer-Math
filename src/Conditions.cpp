@@ -2,10 +2,6 @@
 
 #include "API/OpenAnimationReplacerAPI-UI.h"
 
-#include <imgui.h>
-#include <imgui_stdlib.h>
-#include <rapidjson/document.h>
-
 namespace Conditions
 {
 	MathConditionComponent::MathVariable::MathVariable(const ICondition* a_parentCondition, const char* a_name)
@@ -227,8 +223,7 @@ namespace Conditions
 			MathConditionComponentFactory, "Math Statement"));
 	}
 
-	bool MathStatementCondition::EvaluateImpl(RE::TESObjectREFR* a_refr,
-	                                          [[maybe_unused]] RE::hkbClipGenerator* a_clipGenerator) const
+	bool MathStatementCondition::EvaluateImpl(RE::TESObjectREFR* a_refr, RE::hkbClipGenerator*, void*) const
 	{
 		return mathComponent->GetExpressionResult(a_refr) != 0.f;
 	}

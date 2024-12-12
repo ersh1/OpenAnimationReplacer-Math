@@ -1,6 +1,6 @@
 #pragma once
+
 #include "API/OpenAnimationReplacerAPI-Conditions.h"
-#include <exprtk.hpp>
 
 namespace Conditions
 {
@@ -73,6 +73,6 @@ namespace Conditions
 		MathConditionComponent* mathComponent;
 
 	protected:
-		bool EvaluateImpl(RE::TESObjectREFR* a_refr, RE::hkbClipGenerator* a_clipGenerator) const override;
+		bool EvaluateImpl(RE::TESObjectREFR* a_refr, RE::hkbClipGenerator* a_clipGenerator, void* a_subMod) const override;
 	};
 }

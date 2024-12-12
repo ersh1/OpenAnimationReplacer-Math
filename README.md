@@ -3,12 +3,12 @@
 This is a SKSE64 plugin utilizing Open Animation Replacer's API to add a new custom condition.
 
 ### Requirements
-* [XMake](https://xmake.io) [2.7.8+]
-* C++20 Compiler (MSVC, Clang?)
+* [XMake](https://xmake.io) [2.8.2+]
+* C++23 Compiler (MSVC, Clang-CL)
 
 ## Getting Started
 ```bat
-git clone https://github.com/ersh1/OpenAnimationReplacer-Math
+git clone --recurse-submodules https://github.com/ersh1/OpenAnimationReplacer-Math
 cd OpenAnimationReplacer-Math
 ```
 
@@ -23,11 +23,9 @@ xmake build
 ### Build Output (Optional)
 If you want to redirect the build output, set one of or both of the following environment variables:
 
-- Path(s) to a Skyrim install folder: `SKYRIM_PATH`
+- Path to a Skyrim install folder: `XSE_TES5_GAME_PATH`
 
-- Path(s) to a Mod Manager mods folder: `SKYRIM_MODS_PATH`
-
-> ***Note:*** *Both variables support semicolon (`;`) seperated paths for multiple game installs or `mods` folders.*
+- Path to a Mod Manager mods folder: `XSE_TES5_MODS_PATH`
 
 ### Project Generation (Optional)
 If you want to generate a Visual Studio project, run the following command:
