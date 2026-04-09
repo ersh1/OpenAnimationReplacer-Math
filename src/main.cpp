@@ -27,7 +27,7 @@ void OnMessage(SKSE::MessagingInterface::Message* a_msg)
 	}
 }
 
-SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
+SKSE_PLUGIN_LOAD(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 
