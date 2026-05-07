@@ -3,7 +3,7 @@ includes("lib/commonlibsse-ng")
 
 -- set project constants
 set_project("OpenAnimationReplacer-Math")
-set_version("1.0.3")
+set_version("1.0.4")
 set_license("GPL-3.0")
 set_languages("c++23")
 set_warnings("allextra")
